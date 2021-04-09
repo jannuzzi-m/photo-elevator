@@ -1,0 +1,145 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(gray 20%, black 80%);
+}
+
+#elevator{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+   
+}
+
+#doors-holder{
+    width: 45%;
+    height: 95%;
+    background-image: linear-gradient('red', 'blue');
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.door{
+    width: 100%;
+    height: 101%;
+    background-image: linear-gradient(rgb(97, 96, 96) 10%, rgb(23, 32, 32) 90%);
+    transition: 3s;
+}
+
+.button{
+    cursor: pointer;
+}
+
+#door1{
+    border-right: solid 1px black;
+}
+#door2{
+    border-left: solid 1px black;
+}
+
+.buttons{
+    width: 10%;
+    background-image: linear-gradient(silver, darkgray);
+    position: fixed;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+#screen{
+    margin-top: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+    height: fit-content;
+    text-align: center;
+    border: 1px solid rgb(87, 87, 87)
+}
+
+@keyframes shake{
+    0% { transform: translate(-0%); }
+    25% { transform: translate(-0.3%, -1) }
+    50% {transform: translate(0.3%, 1%) }
+    75% { transform: translate(-0.3%, -1%)}
+    100% { transform: translate(0%, 0%)}
+}
+
+#panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.button{
+    background-color: rgb(121, 121, 121);
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: small; 
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+#settings{
+   z-index: 10;
+   position: fixed;
+}
+
+#modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(44, 43, 43, 0.7);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#save {
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    background-color: #ccc;
+    position: fixed;
+    right: 20px;
+    top: 2px;
+    z-index: 100;
+    display: none;
+
+}
